@@ -127,25 +127,25 @@
 
           <!-- Edit Task Modal -->
 
-          <div>
-            <div>
+          <div id="task-modal" class="fixed inset-0 bg-black bg-opacity-50% flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg p-6 w-96 shadow-xl">
 
-              <h2> Edit Task </h2>
+              <h2 class="text-lg font-bold mb-4"> Edit Task </h2>
 
-              <label> Title </label>
+              <label class="block mb-2 text-sm"> Title: </label>
               <input type="text" id="modal-title" class="border rounded p-2 mb-4" placeholder="Title">
 
-              <label> Description </label>
+              <label class="block mb-2 text-sm"> Description </label>
               <input type="text" id="modal-description" class="border rounded p-2 mb-4" placeholder="Description">
 
-              <label> Status </label>
+              <label class="block mb-2 text-sm"> Status </label>
 
               <select id="modal-status" class="border rounded p-2 mb-4">
 
                 <option value="todo">TODO</option>
                 <option value="doing">DOING</option>
                 <option value="done">DONE</option>
-                
+
               </select>
             </div>
           </div>
