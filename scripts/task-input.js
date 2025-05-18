@@ -44,14 +44,18 @@ const Tasks = [
   },
 ];
 
+// Funtion to get all "done" tasks.
 function getDoneTasks() {
   return Tasks.filter((task) => task.status === "done");
 }
 
+// Funtion adds different ID for each task.
 let taskId = Tasks.length + 1;
 
 //Function to add Task details
 // This function is called when the user clicks the "+" button
+// It also is also equiped with a max tasks lengeth check
+// It will alert the user if the max tasks length is reached
 let addTaskDetails = () => {
   if (Tasks.length >= MAX_TASKS) {
     alert(
@@ -129,6 +133,6 @@ function loadTasksOnStartup() {
 // Call the function when the page loads
 document.addEventListener("DOMContentLoaded", loadTasksOnStartup);
 
-// conssole.logs all Tasks and Completed tasks
+// console.logs all Tasks and Completed tasks
 console.log("All tasks:      ", Tasks);
 console.log("Completed tasks:", getDoneTasks());
