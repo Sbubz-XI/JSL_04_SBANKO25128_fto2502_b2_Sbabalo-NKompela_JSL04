@@ -112,6 +112,18 @@ let addTask = () => {
   console.log("Task successfully added!");
 };
 
+// Function to open modal with task details
+function openModal(taskId) {
+  currentTaskId = taskId;
+  let task = Tasks.find((t) => t.id === taskId);
+
+  document.getElementById("modal-title").value = task.title;
+  document.getElementById("modal-description").value = task.description;
+  document.getElementById("modal-status").value = task.status;
+
+  document.getElementById("task-modal").classList.remove("hidden");
+}
+
 //loads up existing Tasks on startup
 function loadTasksOnStartup() {
   Tasks.forEach((task) => {
