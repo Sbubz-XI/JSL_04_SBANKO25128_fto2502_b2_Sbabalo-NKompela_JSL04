@@ -129,6 +129,18 @@ function closeModal() {
   document.getElementById("task-modal").classList.add("hidden");
 }
 
+// Function to save changes
+function saveTask() {
+  let task = Tasks.find((t) => t.id === currentTaskId);
+
+  task.title = document.getElementById("modal-title").value;
+  task.description = document.getElementById("modal-description").value;
+  task.status = document.getElementById("modal-status").value;
+
+  updateTaskUI();
+  closeModal();
+}
+
 //loads up existing Tasks on startup
 function loadTasksOnStartup() {
   Tasks.forEach((task) => {
