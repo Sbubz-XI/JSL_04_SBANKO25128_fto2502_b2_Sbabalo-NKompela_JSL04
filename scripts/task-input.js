@@ -1,4 +1,4 @@
-const MAX_TASKS = 5;
+const MAX_TASKS = 6;
 const Tasks = [
   {
     id: 1,
@@ -52,7 +52,8 @@ let addTaskDetails = () => {
   console.log(
     `Task Added - ID: ${task.id}, Title: "${task.title}", Status: "${task.status}"`
   );
-  console.log(Tasks);
+  console.log("All tasks:      ", Tasks);
+  console.log("Completed tasks:", doneTasks);
 
   return task;
 };
