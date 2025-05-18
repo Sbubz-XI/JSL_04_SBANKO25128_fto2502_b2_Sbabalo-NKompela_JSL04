@@ -124,6 +124,11 @@ function openModal(taskId) {
   document.getElementById("task-modal").classList.remove("hidden");
 }
 
+// Function to close modal
+function closeModal() {
+  document.getElementById("task-modal").classList.add("hidden");
+}
+
 //loads up existing Tasks on startup
 function loadTasksOnStartup() {
   Tasks.forEach((task) => {
