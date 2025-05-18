@@ -44,7 +44,9 @@ const Tasks = [
   },
 ];
 
-const doneTasks = Tasks.filter((task) => task.status === "done");
+function getDoneTasks() {
+  return Tasks.filter((task) => task.status === "done");
+}
 
 let taskId = Tasks.length + 1;
 
@@ -79,7 +81,7 @@ let addTaskDetails = () => {
     `Task Added - ID: ${task.id}, Title: "${task.title}", Status: "${task.status}"`
   );
   console.log("All tasks:      ", Tasks);
-  console.log("Completed tasks:", doneTasks);
+  console.log("Completed tasks:", getDoneTasks());
 
   return task;
 };
@@ -129,4 +131,4 @@ document.addEventListener("DOMContentLoaded", loadTasksOnStartup);
 
 // conssole.logs all Tasks and Completed tasks
 console.log("All tasks:      ", Tasks);
-console.log("Completed tasks:", doneTasks);
+console.log("Completed tasks:", getDoneTasks());
