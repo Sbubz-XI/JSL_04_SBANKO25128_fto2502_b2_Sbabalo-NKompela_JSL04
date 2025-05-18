@@ -44,9 +44,9 @@
 
         <div class="absolute right-0  md:justify-end md:items-center md:mr-5">
 
-          <button onclick="addTask()" class="hidden md:flex bg-[#635FC7] text-white p-2 rounded-2xl w-full"> Add Task </button>
+          <button onclick="addTask()" class="cursor-pointer hidden md:flex bg-[#635FC7] text-white p-2 rounded-2xl w-full"> Add Task </button>
 
-          <button onclick="addTask()" class="flex md:hidden bg-[#635FC7] text-white text-3xl items-center justify-center w-9 h-9 pb-2 rounded-2xl mr-3"> + </button>
+          <button onclick="addTask()" class="cursor-pointer flex md:hidden bg-[#635FC7] text-white text-3xl items-center justify-center w-9 h-9 pb-2 rounded-2xl mr-3"> + </button>
 
         </div>
 
@@ -105,8 +105,8 @@
 
           <!-- Edit Task Modal -->
 
-          <div id="task-modal" class="fixed inset-0 bg-black bg-opacity-50% flex items-center justify-center hidden">
-            <div class="grid grid-rows-8 bg-white rounded-lg p-6 w-96 h-120 shadow-xl">
+          <div id="task-modal" style="background-color: rgba(0, 0, 0, 0.5)" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden">
+            <div class="grid grid-rows-8 bg-white rounded-lg p-6 w-96 h-auto shadow-xl">
 
               <h2 class="text-lg font-bold mb-4"> Edit Task </h2>
 
@@ -129,8 +129,8 @@
 
               </select>
 
-              <button onclick="saveTask()" class="bg-[#635FC7] text-white my-2 px-4 py-2 rounded-lg">Save</button>
-              <button onclick="closeTask()" class="bg-[#F4F7FD] text-[#635FC7]px-4 py-2 rounded-lg ">Close</button>
+              <button onclick="saveTask()"  class="bg-[#635FC7] cursor-pointer text-white my-2 px-4 py-2 rounded-lg">Save</button>
+              <button onclick="closeModal()"  class="bg-[#F4F7FD] cursor-pointer text-[#635FC7]px-4 py-2 rounded-lg ">Close</button>
             </div>
           </div>
           

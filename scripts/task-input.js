@@ -96,7 +96,7 @@ let addTask = () => {
   let task = addTaskDetails();
 
   let taskElementHTML = `
-    <div class="bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 font-bold shadow-md grid grid-rows-2">
+    <div class="bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 font-bold shadow-md grid grid-rows-2 cursor-pointer">
       <h2 class="row-span-1 text-lg" >${task.title}</h2>
       <p class="row-span-1 text-md text-gray-800" >${task.description}</p>
     </div>
