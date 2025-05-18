@@ -141,6 +141,23 @@ function saveTask() {
   closeModal();
 }
 
+// Function to update UI after editing
+function updateTaskUI() {
+  ["todo-column", "doing-column", "done-column"].forEach((columnId) => {
+    document.getElementById(columnId).innerHTML = "";
+  });
+
+  Tasks.forEach((task) => {
+    let taskElement = document.createElement("div");
+    taskElement.className =
+      "bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 font-bold shadow-md";
+    taskElement.innerHTML = `<h2 class="text-lg">${task.title}</h2><p class="text-md text-gray-800">${task.description}</p>`;
+
+    taskElement.addEventListener("click", () => openModal(task.id));
+    document.getElementById(`${task.status}-column`).appendChild(taskElement);
+  });
+}
+
 //loads up existing Tasks on startup
 function loadTasksOnStartup() {
   Tasks.forEach((task) => {
